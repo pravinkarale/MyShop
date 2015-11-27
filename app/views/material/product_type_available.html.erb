@@ -1,0 +1,35 @@
+
+<div id="material_type">
+<center><h3>Types of Materail</h3></center>
+<% @counter=0 %>
+<%@no_of_column = 2 %>
+<% k=0 %>
+
+<table border='1'>
+<tr><%=button_to "Back To Dashboard" ,:action=>'dashboard'%></tr></br>
+		<%if @product_type != nil%>
+	
+	  <%p @product_type%>
+	  <% @no_of_rows = @product_type.size %>
+	  <% @no_of_row = ((@no_of_rows/3) + 1) %>
+	
+	  
+	    <%for i in 0...@no_of_row %>  
+			<tr>
+				<%for j in 0..@no_of_column %>
+				  <td>
+				  	<%if k < @product_type.size %>
+				  	    <%=label_tag "#{@product_type[k].Type}" %>
+			    	  	<%= link_to(image_tag(@product_type[k].image.url,:size => "225x300"),:id=> @product_type[k].id,:action=>'users_choice')%>
+
+				  	<%end%>
+				  </td>
+			   <%k += 1%>
+			   <%end%>
+	    	</tr>
+	    <%end%>
+	    <%end%>
+
+	</table></br>
+
+<div>

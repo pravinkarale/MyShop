@@ -1,0 +1,40 @@
+
+
+<center><h1>Listing subtypes</h1></center>
+<%@sr_no=0%>
+
+<%#@subtypes.each do |type|%>
+<%#@all_type =  %>
+<%#end%>
+
+<div id="types_show">
+<table>
+  <tr>
+    <th>SR.NO</th>
+    <th>Subtype</th>
+    <th>Typeid</th>
+    <th colspan="3">Operation</th>
+  </tr>
+
+<% @subtypes.each do |subtype| %>
+  <tr>
+    <%@sr_no += 1%>
+    <td><%=@sr_no%></td>
+    <td><%= subtype.subtype %></td>
+    <td><%= subtype.type_id %></td>
+    <td><%= link_to 'Show', subtype %></td>
+    <td><%= link_to 'Edit', edit_subtype_path(subtype) %></td>
+    <td><%= link_to 'Destroy', subtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</div>
+</table>
+<br/>
+
+<%= button_to 'New Subtype', new_subtype_path %></br>
+ <%=button_to 'Dashboard',:controller=>'material',:action=>'dashboard'%>&nbsp;&nbsp;
+
+
+
+
+

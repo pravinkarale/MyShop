@@ -1,0 +1,73 @@
+<script>
+
+function updateSubtype()
+  {
+    //alert("hiiiii");
+   var myselect = $("#stocktype option:selected").text();
+    $.ajax({
+        url:'SubtypeUpdate', 
+        type: 'get',
+        data: {first_event: myselect},      
+    });
+  }
+
+</script>
+
+<body>
+  <div id="title">Add New Product</div>
+
+    <% if @material.errors.any? %>
+    <div id= "save_new_product_error_msg">
+          <% @material.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+    </div>
+    <%end%>
+
+
+  <div id="add_new_product">
+    
+    <%= form_for :@material, url: material_saveNewProduct_path,:html => { :multipart => true } do |f| %>
+         
+        <br><div class="row"><label class="col1"><%=f.label :Type%>:&nbsp;&nbsp;</label>
+          <div id="stocktype">
+        	<%=f.collection_select :Type,Type.all,:Type,:Type ,{:prompt=>'Select One'},:onchange=>"updateSubtype();"%></div>
+        </div>
+    
+        <div class="row"><label class="col1"><%=f.label :subtype%>:&nbsp;&nbsp;</label>
+         <div id = "stocksubtype"><%=render :partial=>"update_subtype" %></div>
+        </div>
+            
+        <div class="row"><label class="col1"><%=f.label :size%>:&nbsp;&nbsp;</label>
+          <span class="col2">
+            <%=f.collection_select :size,Size.all,:size,:size ,{:prompt=>'Select one'}%></span>
+          </div>
+
+        <div class="row"><label class="col1">
+          <%=f.label :price%>&nbsp;&nbsp;</label>
+          <span class="col2"><%=f.text_field :price ,:value=>''%></span>        
+        </div>
+
+        <div class="row"><label class="col1">
+          <%=f.label :Image%>&nbsp;&nbsp;</label>
+          <span class="col2"><%=f.file_field :image%></span>
+        </div>
+        
+        <div id="button_set" style="float:left">
+          <div class="submit">
+              <%= f.submit "SAVE"%>
+          </div>
+        </div>
+
+    <%end%>
+
+      <div id="button_set" style="float:left">
+          <%=button_to :cancel,:action=>'dashboard'%>&nbsp;&nbsp;
+      </div>
+
+  </div>  <!-- maindiv -->
+
+</body>
+
+
+  

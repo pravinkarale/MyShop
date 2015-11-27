@@ -1,0 +1,12 @@
+<center><h2>New subtype</h2></center>
+	<% if @subtype.errors.any? %>
+	    <div id= "save_new_product_error_msg">
+	          <% @subtype.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	          <% end %>
+	    </div>
+	<%end%>
+
+<%= render 'form' %>
+
+<%= link_to 'Cancel', :controller=>'material',:action=>'dashboard' %>

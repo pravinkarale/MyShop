@@ -1,0 +1,16 @@
+<center><p id="notice"><%= notice %></p></center>
+<div id="form-css">
+<p>
+  <b>Subtype:</b>
+  <%= @subtype.subtype %>
+</p>
+
+<p>
+  <b>Typeid:</b>
+  <%= @subtype.type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_subtype_path(@subtype) %> |
+<%= link_to 'Back', subtypes_path %>
+</div>

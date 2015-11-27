@@ -1,0 +1,46 @@
+
+<html>
+<head>
+  <title>MyShop</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<script>
+  function updatesection(id){
+  	 
+  	var material_type = id;
+  	
+  	 $.ajax({
+			 	url: 'update_product',
+			 	type: 'get',
+			 	data:{
+            type_of_material: material_type
+         },
+			 })
+  }
+</script>
+
+<body>
+
+<h7>Type of Material</h7>
+
+<div id = "typecloth">
+<%=button_tag 'Top',:id=>"top",:onclick=>"updatesection(id);"%>&nbsp;
+<%=button_tag 'Jegins',:id=>"jegins",:onclick=>"updatesection(id)"%>&nbsp;
+<%=button_tag 'Kurtys',:id=>"kurty",:onclick=>"updatesection(id)"%>
+</div>
+
+
+<h7>Material SubType</h7>
+
+<div id="sub_typecloth">
+</div>
+
+<div id = "material">
+</div>
+
+
+</body>
+</html>

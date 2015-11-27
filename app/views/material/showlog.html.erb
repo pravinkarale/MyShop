@@ -1,0 +1,60 @@
+<% if @all_material != [] %>
+<div id ="title" style="float:left">
+		<h4>Transaction Log On Date <%=@all_material.first.transact_date%></h4>
+</div>
+
+<div id="trans_hystory">
+
+	<%j = 0 %>
+	<table id="t01" >
+		<tr></tr>
+		<col width="100">
+        <col width="120">
+        <col width="80">
+        <col width="130">
+        <col width="100">
+        <col width="110">
+	<tr>
+		<th>Type</th>
+		<th>SubType</th>
+		<th>Size</th>
+		<th>Price(in Rs.)</th>
+		<th>Sold_Price(in Rs.)</th>
+		<th>Transaction Date</th>
+		
+	</tr>
+	
+		<% @paginated_data.each do |i|%>
+		<tr>
+			<td><%=i.Type%></td>
+			<td><%=i.subtype%></td>
+			<td><%=i.size%></td>
+			<td><%=i.price%></td>
+			<td><%=i.sold_price%></td>
+			<% j = j + i.sold_price %>
+			<td><%=i.transact_date%></td>
+		</tr>
+		<%end%>
+		<tr><th>Total Cost</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th><%=@total_sold_price%></th>
+		<td></td></tr>
+
+</table>
+<div id="pagination">
+	<%= paginate @paginated_data%>	
+</div>
+
+
+
+<%else%>
+<div id="error_prompt"><h4>Their Is No Single Transaction Made On The Day</h4></div>
+<%end%>
+	
+		<div id="dashborad_btn">
+		    <%=button_to "Dashboard" ,:action=>'dashboard'%>
+		</div>
+
+</div> <!--  trans-hystory div -->

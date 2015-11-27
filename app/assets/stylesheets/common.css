@@ -1,0 +1,341 @@
+#typecloth{
+	float:left;
+	position:absolute;
+	height:60px;
+	width:200px;
+	border: 0.5px solid black;
+}
+
+#sub_typecloth{
+	position:absolute;
+	height:60px;
+	width:200px;
+	margin-left:400px;
+	/*background-color: red;*/
+	border: 0.5px solid black;
+}
+
+#user_input_button{
+	margin-top:20px;
+	margin-left: 700px;
+	height:50px;
+	width:350px;
+}
+
+#header{
+	/*margin-top:50px;*/
+	height:70px;
+	width:100%;
+	background-color:#C71585;
+}
+
+#logo{
+	height:40px;
+	width:80px;
+	margin-left:20px;
+/*	margin-top:5px;*/
+}
+
+#material_type{
+
+	height: 550px;
+	width:800px;
+	margin-left:200px;
+}
+
+#choice_available{
+
+	height: 550px;
+	width:800px;
+	margin-left:200px;
+}
+#add_to_cart_dashboard_button{
+	height:40px;
+	width:200px;
+	margin-top:15px;
+	margin-left: 400px;
+}
+
+
+#thinheader{
+	height:40px;
+	width:100%;
+	background-color:#F5BDB3;
+}
+
+#material{
+	margin-top:80px;
+	position:absolute;
+	height:600px;
+	width:100%;
+}
+
+#userschoice{
+	margin-left :500px;
+	margin-top:5px;
+	position:absolute;
+	height:30px;
+	width:375px;
+}
+#setting-tab{
+	height:40px;
+	width:80px;
+	position:absolute;
+	margin-left :870px;
+	margin-top:5px;
+}
+
+#selected-product{
+	width:300px;
+	float: left;
+	height:500px;
+	margin :20px;	 
+}
+#product-specification{
+	width:200px;
+	float:right;
+	height:140px;
+	margin-right: 20px;
+	margin-top:70px;
+	border:0.5px solid black;
+	/*background-color: red;*/
+}
+#Added-product{
+	width:300px;
+	float:right;
+	height:200px;
+	margin-right: 120px;
+	margin-top:70px;
+	/*border:0.5px solid black;*/
+}
+#button_set{
+	height:40px;
+	width:200px;
+	margin-left:90px; 
+}
+.style_image{
+	padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+#maindiv{
+	height:450px;
+	width:950px;
+	/*border: 0.5px solid black;	*/
+	margin-left:10px;
+	/*background-color: red*/
+}
+
+#success_msg{
+	height:50px;
+	width:190px;
+	margin-left:280px;
+	margin-top:40px;
+}
+#dateselection{
+	height:200px;
+	width:300px;
+	margin-left:350px;
+	margin-top:80px;
+	/*border:0.5px solid black;*/
+}
+
+table#t01, th, td {
+    border: 1px solid black;
+   background-color: #f1f1c1; 
+   text-align: center;
+}
+th, td {
+    padding: 7px;
+}
+#trans_hystory{
+	height:380px;
+	width:750px;
+	position: absolute;
+	margin-top: 80px;
+	margin-left:220px;
+}
+
+#pagination{
+	height:40px;
+	width:300px;
+	position: absolute;
+	margin-top:40px;
+	margin-left:300px;
+}
+#row {
+  clear: both;
+  width: 335px;
+}
+
+
+#dashborad_btn{
+    height:30px;
+	width:50px;
+	margin-left:270px ; 
+	margin-top: 10px ; 
+}
+
+#error_prompt{
+	height:50px;
+	width:500px;	
+	margin-top:100px;
+	margin-left:250px ;
+}
+
+#add_new_product{
+	height:250px;
+	width:400px;	
+	margin-top:40px;
+	margin-left:300px ;	
+	border:0.5px solid black;		
+}
+#save_new_product_error_msg{
+	height:100%;
+	width:400px;
+	margin-top: 20px;	
+	margin-left: 300px;
+	font-family: "Times New Roman", Times, serif;
+	color: #D8000C;
+    background-color: #FFBABA;
+}
+#stocksubtype{
+	text-align: right;
+	width: 135px;
+	height: 31px;
+	margin: 0;
+	float: left;
+	margin-right: 2px;
+	background: url(images/bg_label.gif) no-repeat;
+}
+#singlerow{
+	height:30px ;
+	width:100px ;
+	/*float:right;*/
+	background-color:red
+}
+#layer5{
+	position: absolute;
+	width: 300px;
+	height: 44px;
+	z-index:  1;
+	left: 300px;
+}
+
+#layer6{
+	position: absolute;
+	width:80px;
+	height: 40px;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	background-color:red;
+}
+
+#types_show{
+	width:230px;
+	height: 150px;
+	margin-left:350px;
+	margin-top:60px;
+	
+}
+
+#form-css{
+	width: 300px;
+	height: 250px;
+	/*background-color: red;*/
+	margin:2px;
+	margin-top: 80px;
+	margin-left: 400px;
+	/*border: 1px solid #8595B2;*/
+}
+
+
+/*/////////////////////////////////////////////////////*/
+
+#title {
+	margin-left: 300px;
+	width: 330px;
+	height: 26px;
+	color: #5A698B;
+	font: bold 18px/28px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-top: 5px;
+	background: transparent url("images/bg_legend.gif") no-repeat;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+form {
+	width: 335px;
+}
+
+.col1 {
+	text-align: right;
+	width: 135px;
+	height: 31px;
+	margin: 0;
+	float: left;
+	margin-right: 2px;
+	background: url(images/bg_label.gif) no-repeat;
+}
+
+.col2 {
+	width: 195px;
+	height: 31px;
+	display: block;
+	float: left;
+	margin: 0;
+	background: url(images/bg_textfield.gif) no-repeat;
+}
+
+.col2comment {
+	width: 195px;
+	height: 98px;
+	margin: 0;
+	display: block;
+	float: left;
+	background: url(images/bg_textarea.gif) no-repeat;
+}
+
+.col1comment {
+	text-align: right;
+	width: 135px;
+	height: 98px;
+	float: left;
+	display: block;
+	margin-right: 2px;
+	background: url(images/bg_label_comment.gif) no-repeat;
+}
+
+div.row {
+	clear: both;
+	width: 335px;
+}
+
+.submit {
+	height: 29px;
+	width: 330px;
+	background: url(images/bg_submit.gif) no-repeat;
+	padding-top: 5px;
+	clear: both;
+} 
+
+.input {
+	background-color: #fff;
+	font: 11px/14px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5A698B;
+	margin: 4px 0 5px 8px;
+	padding: 1px;
+	border: 1px solid #8595B2;
+}
+
+.textarea {
+	border: 1px solid #8595B2;
+	background-color: #fff;
+	font: 11px/14px "Lucida Grande", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #5A698B;
+	margin: 4px 0 5px 8px;
+}

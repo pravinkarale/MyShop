@@ -1,0 +1,30 @@
+
+<center><h2>Editing subtype</h2></center>
+<div id="form-css">
+
+<%#= form_for @subtype ,:url=> {:action=> :update} do |f| %>
+ <%= form_tag '/update',:id=>@subtype.id do |f| %>
+    <div class="field">
+      <%= label_tag :subtype %>
+      <%= text_field_tag :subtype,"#{@subtype.subtype}" %>
+    </div>
+    
+    <div class="field">
+      <%= label_tag :type_id %>
+      
+      <%@edit_type=Type.includes(:subtypes).where("subtypes.Type_id='#{@subtype.type_id}'").first%>
+
+      <%=text_field_tag :Type,@edit_type.Type,:readonly=>true%>
+       <%=hidden_field_tag :id,@subtype.id%>
+       <%=hidden_field_tag :type_id,@subtype.type_id%>
+    </div>
+    
+    <div class="actions">
+      <%= submit_tag "Save" %>
+    </div>
+
+<% end %>
+
+<%= link_to 'Show', @subtype %> |
+<%= link_to 'Back', subtypes_path %>
+</div>

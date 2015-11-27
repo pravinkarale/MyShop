@@ -1,0 +1,17 @@
+<center><h4>You Have Added One Material With Following Details</h4></center>
+<div id="maindiv">
+<% @show_material = Material.find(params[:id])%>
+
+	<div id = "selected-product" >
+	   <%=image_tag(@show_material.image,size: "320x400")%>
+	</div>
+
+	<div id="Added-product">
+		<p><strong>Type:</strong>&nbsp;<%=@show_material.Type%></p>
+		<p><strong>subtype:</strong>&nbsp;<%=@show_material.subtype%></p>
+		<p><strong>size:</strong>&nbsp;<%=@show_material.size %></p>
+		<p><strong>price:</strong>&nbsp;<%=@show_material.price%></p>		<%=button_to 'Back_to_Dashboard',:action=>'/dashboard'%>
+	</div>	
+
+
+</div>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+	function isNumber(e){
+
+		 if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+			 alert("Please Insert Only Numeric Value");
+			 return false;
+		 }
+		 else
+		 {
+		 	return true;
+		 }
+
+	}
+</script>
+</head>
+<body>
+	
+<%= form_for @users_choice1, url: material_daily_transact_path do |f|%>
+		
+		 <div id="maindiv">
+		
+			<div id = "selected-product" >
+			   <%=image_tag(@users_choice.image,size: "320x400")%>
+			</div>
+			   <%=f.hidden_field :image,:value=>@users_choice.image%>
+			
+
+			<div id="product-specification">
+				 Actual Product Price :<b><%=@users_choice.price%></b></br>	
+		        <%=f.hidden_field :price,:value=>@users_choice.price%>
+		        <p><%=f.label 'Sold_At:'%>
+				
+				<input type="text" class="textfield" value="" id="sold_price" name="sold_price" onkeypress="return isNumber(event)" /></p>
+				
+		        <%=f.hidden_field :transact_date,:value=>Time.now%>
+		        <%=f.hidden_field :Type,:value=>@users_choice.Type %>
+		        <%=f.hidden_field :subtype,:value=>@users_choice.subtype%>
+		        <%=f.hidden_field :size,:value=>@users_choice.size%>
+		        <%=f.submit 'Save Product'%>
+			</div>
+		
+			</div> 
+
+<%end%>
+		<div id="add_to_cart_dashboard_button">
+					<%=button_to "Back To Dashboard" ,:action=>'dashboard'%>
+		</div>
+</body>
+</html>
+

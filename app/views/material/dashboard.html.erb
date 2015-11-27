@@ -1,0 +1,78 @@
+<head>
+<style type="text/css">
+
+.inline { 
+    display: inline-block; 
+    border: 1px solid red; 
+/*    margin:10px;*/
+    }
+ul{
+        padding: 0;
+        list-style: none;
+        /*background: #f2f2f2; */
+    
+}
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 22px;
+        color: #333;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: #fff;
+        background: #87CEFA;/*#939393;*/
+    }
+    ul li ul.dropdown{
+        min-width: 100px; /* Set width of the dropdown */
+        background: #87CEFA ;/*#f2f2f2;*/
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+    }
+    ul li:hover ul.dropdown{
+        display: block;	/* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+    }
+
+</style>
+</head>
+<body>
+<div>
+    <div class='inline'>
+        <div id = "userschoice">
+
+        	<a class="btn btn-info btn-md" href="product_type_available">Transaction</a>
+        	<a class="btn btn-info btn-md" href="dateSelection">Transaction-Log</a>
+        	<a class="btn btn-info btn-md" href="addNewProduct">Admin Panel</a>
+        </div>
+    </div>
+
+    <div class='inline'>
+        <div id="setting-tab">
+            <ul>
+                <li>
+                <a class="btn btn-info btn-md" href="#">Settings &#9662;</a>
+                    <ul class="dropdown">
+                        <li><a href="/types">Type</a></li>
+                        <li><a href="/subtypes">SubType</a></li>
+                        <li><a href="/sizes">Size</a></li>
+                    </ul>
+                </li>
+            </ul>   
+        </div>
+    </div>    
+
+</div>
+</body>
+
+
+

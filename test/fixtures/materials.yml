@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Type: MyString
+  subtype: MyString
+  size: MyString
+  price: 1
+
+two:
+  Type: MyString
+  subtype: MyString
+  size: MyString
+  price: 1

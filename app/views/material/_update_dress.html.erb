@@ -1,0 +1,21 @@
+
+<% @counter=0 %>
+<%@no_of_column = 2 %>
+<% k=0 %>
+<table border ="1">
+ <%p @no_of_rows = (@selected_dress.size/3) + 1%>
+ 
+<%for i in 0...@no_of_rows %>
+  <tr>
+ 	<%for j in 0..@no_of_column %>
+ 	    <%if @selected_dress[k] != nil %>
+ 	        <td><%= image_tag(@selected_dress[k].image_name,:size => "300x250")%></td>
+ 	        <% k += 1%>
+        <%end%>
+    <%end%> <!-- column end -->
+  </tr>
+ <%end%>  <!-- Row End -->
+</table>
+
+<%#= link_to(image_tag("#{@selected_dress[k].image_name}"))#,:action=> "dashboard") %>
+

@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>MyShop</title>
+</head>
+<body>
+
+
+<center><h3>Types of Materail</h3></center>
+<% @counter=0 %>
+<% @no_of_column = 2 %>
+<% k=0 %>
+<div id="choice_available">
+	<table border='1'>
+		<tr><%=button_to "Back To Dashboard" ,:action=>'dashboard'%></tr></br>
+		<%if @selected_dress != nil%>
+		    <% @no_of_row = @selected_dress.size/3 + 1%>
+		        <%for i in 0...@no_of_row %>  
+				  <tr>
+					<%for j in 0..@no_of_column %>					 	
+					 	<td>
+						 	<% if(@selected_dress[k] != nil)%>
+						 	<%=label_tag "#{@selected_dress[k].subtype}"%>
+							<%= link_to(image_tag(@selected_dress[k].image,:size => "225x300"),:id=>@selected_dress[k].id,:action=>'add_to_cart') %>
+							
+							<%end%>
+						</td> 
+						    <%k += 1%>
+					<%end%> <!-- for -->
+		    	  </tr>
+		        <%end%> <!-- for -->
+        <%else%>
+            <h4>Selected Type of Material Not Available</h4>
+	    <%end%>
+	</table>
+</div>
+	</body>
+</html>

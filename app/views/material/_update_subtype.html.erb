@@ -1,0 +1,14 @@
+<!-- <div id="stocksubtype"> -->
+<%if @subtype!= nil%>
+	<select name="@material[subtype]">
+		<option value="default_msg" selected>Please Select One</option>
+		<%@subtype.each do |i|%>
+		    <option value="<%=i.subtype%>" ><%=i.subtype%></option>
+		<%end%>
+	</select>
+<%else%>
+	<select name="@material[subtype]">
+		<option value="">Please Select Subtype</option>
+	</select>
+<%end%>
+<!-- </div> -->

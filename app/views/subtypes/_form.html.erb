@@ -1,0 +1,19 @@
+<div id="form-css">
+  <%= form_tag('create') do |f| %>
+    
+    <div class="field">
+      <%= label_tag :subtype %><br />
+      <%= text_field_tag :subtype %>
+    </div>
+    
+    <div class="field">
+      <%= label_tag :typeid %><br />
+      <%= collection_select :Type,:Type, Type.all,:id, :Type %>
+    </div>
+    
+    <div class="actions">
+      <%= submit_tag "Save" %>
+    </div>
+
+  <% end %>
+<div>

@@ -1,0 +1,29 @@
+<center><h2>Listing sizes</h2></center>
+<%@sr_no=0%>
+<div id="types_show">
+<table>
+  <tr>
+    <th>SR NO</th>
+    <th>Size</th>
+    <th colspan="3">Operation</th>
+    
+  </tr>
+
+<% @sizes.each do |size| %>
+  <tr>
+    <%@sr_no += 1%>
+    <td><%=@sr_no%></td>
+    <td><%= size.size %></td>
+    <td><%= link_to 'Show', size %></td>
+    <td><%= link_to 'Edit', edit_size_path(size) %></td>
+    <td><%= link_to 'Destroy', size, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</div>
+</table>
+
+<br />
+
+<%= button_to 'New Size', new_size_path %></br>
+
+<%=button_to 'Dashboard',:controller=>'material',:action=>'dashboard'%>&nbsp;&nbsp;
